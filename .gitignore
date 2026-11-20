@@ -1,0 +1,27 @@
+# Variáveis de ambiente e segredos locais
+
+.env
+.env.*
+!.env.example
+application-local.yml
+application.local-properties
+
+#Backend
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.jar
+*.war
+*.log
+
+#Frontend
+frontend/node_modules
+frontend/dist
+frontend/.angular/
+frontend/coverage/
+
+#IDEs e Sistema Operacional
+.idea/
+*.iml
+.vscode/
+.DB_Store
+Thumbs.db
