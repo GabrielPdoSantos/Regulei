@@ -2,6 +2,24 @@ spring:
   application:
     name: regulei-api
 
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:regulei_db}
+    username: ${DB_USER:regulei_user}
+    password: ${DB_PASSWORD:troque_esta_senha_local}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+    show-sql: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
 server:
   port: ${SERVER_PORT:8080}
 
